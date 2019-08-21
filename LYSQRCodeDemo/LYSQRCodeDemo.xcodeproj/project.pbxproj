@@ -15,7 +15,9 @@
 		CC334B6E22E1B754005AF6B5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B6D22E1B754005AF6B5 /* main.m */; };
 		CC334B7822E1B754005AF6B5 /* LYSQRCodeDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B7722E1B754005AF6B5 /* LYSQRCodeDemoTests.m */; };
 		CC334B8322E1B754005AF6B5 /* LYSQRCodeDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B8222E1B754005AF6B5 /* LYSQRCodeDemoUITests.m */; };
-		CC334B9322E1B856005AF6B5 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC334B9122E1B856005AF6B5 /* ScanViewController.m */; };
+		CCD555D9230CDF5D00F39D97 /* LYSQRCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD555D7230CDF5D00F39D97 /* LYSQRCodeView.m */; };
+		CCD555DC230CE07300F39D97 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = CCD555DA230CE07300F39D97 /* README.md */; };
+		CCD555DD230CE07300F39D97 /* LYSQRCodeView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CCD555DB230CE07300F39D97 /* LYSQRCodeView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +54,10 @@
 		CC334B7E22E1B754005AF6B5 /* LYSQRCodeDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LYSQRCodeDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC334B8222E1B754005AF6B5 /* LYSQRCodeDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYSQRCodeDemoUITests.m; sourceTree = "<group>"; };
 		CC334B8422E1B754005AF6B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CC334B9122E1B856005AF6B5 /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
-		CC334B9222E1B856005AF6B5 /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		CCD555D7230CDF5D00F39D97 /* LYSQRCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSQRCodeView.m; sourceTree = "<group>"; };
+		CCD555D8230CDF5D00F39D97 /* LYSQRCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSQRCodeView.h; sourceTree = "<group>"; };
+		CCD555DA230CE07300F39D97 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../../README.md; sourceTree = "<group>"; };
+		CCD555DB230CE07300F39D97 /* LYSQRCodeView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LYSQRCodeView.podspec; path = ../../LYSQRCodeView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +112,9 @@
 				CC334B5F22E1B753005AF6B5 /* AppDelegate.m */,
 				CC334B6122E1B753005AF6B5 /* ViewController.h */,
 				CC334B6222E1B753005AF6B5 /* ViewController.m */,
-				CC334B9222E1B856005AF6B5 /* ScanViewController.h */,
-				CC334B9122E1B856005AF6B5 /* ScanViewController.m */,
-				CC334B9022E1B794005AF6B5 /* LYSQRCode */,
+				CCD555DB230CE07300F39D97 /* LYSQRCodeView.podspec */,
+				CCD555DA230CE07300F39D97 /* README.md */,
+				CCD555D6230CDF5D00F39D97 /* LYSQRCodeView */,
 				CC334B6422E1B753005AF6B5 /* Main.storyboard */,
 				CC334B6722E1B754005AF6B5 /* Assets.xcassets */,
 				CC334B6922E1B754005AF6B5 /* LaunchScreen.storyboard */,
@@ -138,12 +142,14 @@
 			path = LYSQRCodeDemoUITests;
 			sourceTree = "<group>";
 		};
-		CC334B9022E1B794005AF6B5 /* LYSQRCode */ = {
+		CCD555D6230CDF5D00F39D97 /* LYSQRCodeView */ = {
 			isa = PBXGroup;
 			children = (
+				CCD555D8230CDF5D00F39D97 /* LYSQRCodeView.h */,
+				CCD555D7230CDF5D00F39D97 /* LYSQRCodeView.m */,
 			);
-			name = LYSQRCode;
-			path = ../../LYSQRCode;
+			name = LYSQRCodeView;
+			path = ../../LYSQRCodeView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +255,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD555DD230CE07300F39D97 /* LYSQRCodeView.podspec in Resources */,
 				CC334B6B22E1B754005AF6B5 /* LaunchScreen.storyboard in Resources */,
 				CC334B6822E1B754005AF6B5 /* Assets.xcassets in Resources */,
+				CCD555DC230CE07300F39D97 /* README.md in Resources */,
 				CC334B6622E1B753005AF6B5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +287,7 @@
 				CC334B6322E1B753005AF6B5 /* ViewController.m in Sources */,
 				CC334B6E22E1B754005AF6B5 /* main.m in Sources */,
 				CC334B6022E1B753005AF6B5 /* AppDelegate.m in Sources */,
-				CC334B9322E1B856005AF6B5 /* ScanViewController.m in Sources */,
+				CCD555D9230CDF5D00F39D97 /* LYSQRCodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,16 +459,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 9P4CA2L57Y;
+				DEVELOPMENT_TEAM = HKHKXULF6R;
 				INFOPLIST_FILE = LYSQRCodeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dx.zhenjiceshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ZJCS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zhenjiceshi;
+				PROVISIONING_PROFILE_SPECIFIER = ZJCS;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -470,16 +478,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 9P4CA2L57Y;
+				DEVELOPMENT_TEAM = HKHKXULF6R;
 				INFOPLIST_FILE = LYSQRCodeDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dx.zhenjiceshi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.ZJCS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zhenjiceshi;
+				PROVISIONING_PROFILE_SPECIFIER = ZJCS;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

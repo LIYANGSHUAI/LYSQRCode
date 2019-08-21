@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "ScanViewController.h"
-@interface ViewController ()
-
+#import "LYSQRCodeView.h"
+@interface ViewController ()<LYSQRCodeViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (weak, nonatomic) IBOutlet UIView *borderView;
+@property (nonatomic, strong) LYSQRCodeView *codeView;
 @end
 
 @implementation ViewController
@@ -18,14 +20,20 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    self.codeView = [[LYSQRCodeView alloc] initWithFrame:self.view.bounds];
+    self.codeView.delegate = self;
+    [self.contentView addSubview:self.codeView];
+    self.codeView.activeAreaRect = CGRectMake(CGRectGetWidth(self.view.bounds)/2.0-200/2.0, CGRectGetHeight(self.view.bounds)/2.0-200/2.0, 200, 200);
+    [self.codeView initialization];
+    [self.codeView startScan];
+    
+    self.borderView.layer.borderWidth = 1;
+    self.borderView.layer.borderColor = [UIColor redColor].CGColor;
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)qrView:(LYSQRCodeView *)qrView didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects
 {
-    [super viewDidAppear:animated];
-    ScanViewController *vc = [[ScanViewController alloc] init];
-    
-    [self presentViewController:vc animated:YES completion:nil];
+    NSLog(@"%@",metadataObjects);
 }
 
 @end

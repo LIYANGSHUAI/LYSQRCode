@@ -1,24 +1,43 @@
-# LYSQRCode
-简单实现扫描二维码,条形码,以及生成二维码的工具
+//
+//  LYSQRCodeView.h
+//  LYSQRCodeDemo
+//
+//  Created by HENAN on 2019/8/20.
+//  Copyright © 2019 HENAN. All rights reserved.
+//
 
-![iOS技术群群二维码](https://github.com/LIYANGSHUAI/LYSRepository/blob/master/iOS技术群群二维码.JPG)
+#import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
 
-```objc
+@class LYSQRCodeView;
+
+@protocol LYSQRCodeViewDelegate <NSObject>
+
+@required
+- (void)qrView:(LYSQRCodeView *)qrView didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects;
+
+@optional
+- (void)qrViewDidStartScan:(LYSQRCodeView *)qrView;
+- (void)qrViewDidStopScan:(LYSQRCodeView *)qrView;
+- (void)notHaveFlashlight;
+@end
+
 @interface LYSQRCodeView : UIView
 
 // 代理
 @property (nonatomic, assign) id<LYSQRCodeViewDelegate> delegate;
 
 /**
-扫描识别类型
-
-默认是
-AVMetadataObjectTypeEAN13Code,
-AVMetadataObjectTypeEAN8Code,
-AVMetadataObjectTypeCode128Code, // 条形码
-AVMetadataObjectTypeQRCode       // 二维码
-*/
+ 扫描识别类型
+ 
+ 默认是
+ AVMetadataObjectTypeEAN13Code,
+ AVMetadataObjectTypeEAN8Code,
+ AVMetadataObjectTypeCode128Code, // 条形码
+ AVMetadataObjectTypeQRCode       // 二维码
+ */
 @property (nonatomic, copy, null_resettable) NSArray<AVMetadataObjectType> *metadataObjectTypes;
 
 // 活跃区域,区域内可检测二维码,区域外不可检测,默认LYSQRCodeView的bounds作为活跃区域
@@ -45,19 +64,4 @@ AVMetadataObjectTypeQRCode       // 二维码
 
 @end
 
-```
-
-```objc
-@class LYSQRCodeView;
-
-@protocol LYSQRCodeViewDelegate <NSObject>
-
-@required
-- (void)qrView:(LYSQRCodeView *)qrView didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects;
-
-@optional
-- (void)qrViewDidStartScan:(LYSQRCodeView *)qrView;
-- (void)qrViewDidStopScan:(LYSQRCodeView *)qrView;
-- (void)notHaveFlashlight;
-@end
-```
+NS_ASSUME_NONNULL_END
